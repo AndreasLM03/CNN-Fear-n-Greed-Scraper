@@ -195,8 +195,8 @@ import yfinance as yf
 
 
 import pandas as pd
-filename = "C:/Users/andre/Dropbox/Apps/alm.gold.2020.coin/Fear_and_Greed.csv"
-# df = pd.read_csv(filename, sep='\t', encoding = 'utf-16',nrows=10,  index_col="CASE") #Filename, Tabulator, Textcodierung, lade nur die ersten 10 Reihen ein, nehme Case als Index
+filename = "C:/*******************/Fear_and_Greed.csv"
+# df = pd.read_csv(filename, sep='\t', encoding = 'utf-16',nrows=10,  index_col="CASE") 
 df = pd.read_csv(filename, sep=',')
 df.columns = ['UNIX', 'Jahr', 'Monat', 'Tag','UHrzeit', 'FnG']
 
