@@ -120,10 +120,6 @@ if MailTrigger == 1:
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
+```    
     
     
-    
----
-## Python Script
-
-copy attached python script on your raspberry pi or copy this text into a python file
