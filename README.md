@@ -147,7 +147,7 @@ This script will be executed every hour and one minute
 
 ---
 ## Upload your CSV file into your clouad on your raspberry pi
-
+Important: You need to install dropbox on your raspberry pi (cf. https://pimylifeup.com/raspberry-pi-dropbox/)
 
 ```python
 3 * * * *  /home/pi/Dropbox-Uploader/dropbox_uploader.sh upload /home/pi/Dokumente/Programme/Fear_and_Greed/Fear_and_Greed$
