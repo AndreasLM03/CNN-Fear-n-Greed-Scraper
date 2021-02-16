@@ -35,8 +35,11 @@ Safe Haven Demand: The difference in returns for stocks versus treasuries
 ---
 ## Python Script
 
+copy attached python script on your raspberry pi or copy this text into a python file
 
 
+
+```python
 #!/usr/bin/python
 
 import time 
@@ -117,3 +120,10 @@ if MailTrigger == 1:
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
+    
+    
+    
+---
+## Python Script
+
+copy attached python script on your raspberry pi or copy this text into a python file
