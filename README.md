@@ -150,7 +150,7 @@ This script will be executed every hour and one minute
 Important: You need to install dropbox on your raspberry pi (cf. https://pimylifeup.com/raspberry-pi-dropbox/)
 
 ```python
-3 * * * *  /home/pi/Dropbox-Uploader/dropbox_uploader.sh upload /home/pi/Dokumente/Programme/Fear_and_Greed/Fear_and_Greed
+3 * * * *  /home/pi/Dropbox-Uploader/dropbox_uploader.sh upload /home/pi/Dokumente/Programme/Fear_and_Greed/Fear_and_Greed.csv
 ```   
 This script will be executed every hour and 3 minutes. The time delay is due to the fact that in case the Python script takes longer to retrieve and save the data, the latest data will still be uploaded to the cloud.
 
