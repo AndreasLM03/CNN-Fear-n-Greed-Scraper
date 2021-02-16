@@ -6,6 +6,11 @@ This script downloads and saves the current CNN Fear and Greed Index at user-def
 
 
 
+<img src= "FnG Index.jpg" width="600">
+
+
+
+
 ---
 ## Fear and Greed
 
