@@ -121,5 +121,14 @@ if MailTrigger == 1:
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
 ```    
+
+
+---
+## Output csv file
+
     
-    
+| UNIX EPOCH | YEAR | MONTH | DAY | HOUR | Fear and Greed Index  |
+|     :---:      | :---:      | :---:      | :---:      | :---:      | :---:      | 
+| 1613484062 | 2021 | 2 | 16 | 1500 | 58 |
+| 1613480463 | 2021 | 2 | 16 | 1400 | 58 |
+| 1613476863 | 2021 | 2 | 16 | 1300 | 63 |
