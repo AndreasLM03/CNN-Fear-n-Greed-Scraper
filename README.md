@@ -132,3 +132,35 @@ if MailTrigger == 1:
 | 1613484062 | 2021 | 2 | 16 | 1500 | 58 |
 | 1613480463 | 2021 | 2 | 16 | 1400 | 58 |
 | 1613476863 | 2021 | 2 | 16 | 1300 | 63 |
+
+
+---
+## Run the script automatically every hour
+
+Go on your terminal and enter crontab -e and enter this command
+
+```python
+1 * * * * /usr/bin/python3 /home/pi/Dokumente/Programme/Fear_and_Greed/20_12_30_Fear_and_Greed.py
+```   
+This script will be executed every hour and one minute
+
+
+---
+## Upload your CSV file into your clouad on your raspberry pi
+
+
+```python
+3 * * * *  /home/pi/Dropbox-Uploader/dropbox_uploader.sh upload /home/pi/Dokumente/Programme/Fear_and_Greed/Fear_and_Greed$
+```   
+This script will be executed every hour and 3 minutes. The time delay is due to the fact that in case the Python script takes longer to retrieve and save the data, the latest data will still be uploaded to the cloud.
+
+
+
+
+
+
+
+
+
+
+
