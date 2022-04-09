@@ -200,26 +200,26 @@ import yfinance as yf
 
 
 import pandas as pd
-filename = "C:/*******************/Fear_and_Greed.csv"
-# df = pd.read_csv(filename, sep='\t', encoding = 'utf-16',nrows=10,  index_col="CASE") 
+filename = "*******************/Fear_and_Greed.csv"
 df = pd.read_csv(filename, sep=',')
-df.columns = ['UNIX', 'Jahr', 'Monat', 'Tag','UHrzeit', 'FnG']
+df.columns = ['UNIX', 'Jahr', 'Monat', 'Tag','Uhrzeit', 'FnG']
 
+df = df.iloc[::-1]
+average_duration = 20
+df['FnG_average']=df['FnG'].rolling(average_duration).mean()
 
 fig, ax1 = plt.subplots(figsize=(20,12))
 ax1.grid(color='black', linestyle='--', linewidth=0.05)
 color = 'tab:red'
 ax1.set_xlabel('date')
 ax1.set_ylabel('Fear and Greed', color=color)
-
 ax1.plot(pd.to_datetime(df['UNIX'],unit='s'), df.FnG, label='FnG', color=color)
+ax1.plot(pd.to_datetime(df['UNIX'],unit='s'), df.FnG_average, label='FnG_average', color='b')
 ax1.tick_params(axis='y', labelcolor=color)
-
-ax1.axhspan(0, 10, alpha=0.3, color='#fb9898')
-ax1.axhspan(100, 90, alpha=0.3, color='#6a5acd')
-
-
-ax1.set_ylim([0, 100])
+ax1.set_ylim(0,100)
+ax1.axhspan(0, 10, alpha=0.3, color='#32FF00')
+ax1.axhspan(10, 15, alpha=0.3, color='#FFF700')
+ax1.axhspan(100, 90, alpha=0.3, color='#FF1300')
 fig.tight_layout()  # otherwise the right y-label is slightly clipped
 ```   
 
@@ -228,7 +228,7 @@ fig.tight_layout()  # otherwise the right y-label is slightly clipped
 
 
 
-<img src= "Fear_and_Greed_Viewer.png" width="800">
+<img src= "Fear_and_Greed_Viewer.jpg" width="800">
 
 
 Here you can see the data of the last 45 days. Critical areas are marked in colors. The market is overheated as soon as it is in the purple area. A good buying opportunity arises on the basis of backtests when there is great market panic, visible in the red area.
