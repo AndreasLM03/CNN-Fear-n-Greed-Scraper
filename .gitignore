@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Data & logs (never commit collected data)
+/data/
+fng.csv
+*.parquet
+logs/
+
+# IDE
+.vscode/
+.idea/

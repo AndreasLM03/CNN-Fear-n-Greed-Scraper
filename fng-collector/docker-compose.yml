@@ -1,0 +1,18 @@
+services:
+  fng-collector:
+    build: .
+    image: fng-collector:latest
+    container_name: fng-collector
+    restart: "no"
+    volumes:
+      - fng_data:/data
+    environment:
+      - DATA_DIR=/data
+
+volumes:
+  fng_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /opt/fng-data
