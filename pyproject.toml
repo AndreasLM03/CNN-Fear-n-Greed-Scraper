@@ -1,0 +1,26 @@
+[project]
+name = "fng-collector"
+version = "0.1.0"
+description = "CNN Fear and Greed Index collector"
+authors = [
+    {name = "AndreasLM03"}
+]
+readme = "README.md"
+requires-python = "^3.12"
+dependencies = [
+    "requests (>=2.34.2,<3.0.0)"
+]
+
+
+[tool.pytest.ini_options]
+markers = ["integration: live tests that require internet access"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "isort (>=8.0.1,<9.0.0)"
+]

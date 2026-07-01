@@ -21,11 +21,6 @@ def _fetch_cnn() -> int:
 
 def fetch_fear_and_greed() -> int:
     """Returns the current Fear & Greed Index value (0–100)."""
-    try:
-        score = _fetch_cnn()
-        logger.info("Fetched FnG from CNN: %d", score)
-        return score
-    except Exception as exc:
-        logger.warning("CNN endpoint failed (%s), trying fallback …", exc)
-
+    score = _fetch_cnn()
+    logger.info("Fetched FnG from CNN: %d", score)
     return score
