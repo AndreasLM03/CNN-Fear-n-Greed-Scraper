@@ -17,7 +17,6 @@ The container starts, fetches the current index via a direct JSON endpoint, writ
 | Priority | Source | Endpoint |
 |---|---|---|
 | 1 | CNN Dataviz API | `production.dataviz.cnn.io/index/fearandgreed/graphdata` |
-| 2 | feargreedchart.com | `feargreedchart.com/api/?action=all` |
 
 ---
 
@@ -29,7 +28,7 @@ fng-collector/
 ├── docker-compose.yml
 ├── requirements.txt
 ├── config.py       # constants (URLs, paths, log limits)
-├── scraper.py      # HTTP fetch with fallback
+├── scraper.py      # HTTP fetch
 ├── storage.py      # CSV write with duplicate guard
 ├── main.py         # entry point
 └── tests/
