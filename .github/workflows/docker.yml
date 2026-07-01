@@ -4,7 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - "fng-collector/**"
+      - "src/**"
+      - "Dockerfile"
+      - "pyproject.toml"
+      - "poetry.lock"
       - ".github/workflows/docker.yml"
   workflow_dispatch:
 
