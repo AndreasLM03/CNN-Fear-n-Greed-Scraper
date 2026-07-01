@@ -5,8 +5,8 @@ description = "CNN Fear and Greed Index collector"
 authors = [
     {name = "AndreasLM03"}
 ]
-readme = "README.md"
 requires-python = "^3.12"
+package-mode = false
 dependencies = [
     "requests (>=2.34.2,<3.0.0)"
 ]
