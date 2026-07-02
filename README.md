@@ -48,7 +48,7 @@ timestamp,value
 ```bash
 mkdir -p ~/fng-data/logs
 
-docker build -t fng-collector:latest ./fng-collector
+docker build -t fng-collector:latest .
 
 docker run --rm \
   -v ~/fng-data:/data \
